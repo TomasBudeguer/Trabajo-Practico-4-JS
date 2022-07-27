@@ -1,10 +1,10 @@
 let cuenta = {
   propietario: "Alex",
   saldoInicial: 0,
-  ingresar: function (agregarDinero) {
+  ingresar (agregarDinero) {
     document.write(`<p>Usted agrego $${agregar} a su cuenta</p>`);
   },
-  extraer: function (extraerDinero) {
+  extraer (extraerDinero) {
     if (extraer > agregar) {
       alert("No puede extraer mas dinero de lo que usted posee en su cuenta");
       document.write("No se efectuo la extraccion");
@@ -12,7 +12,7 @@ let cuenta = {
       document.write(`<p>Usted retiro $${extraer} de su cuenta</p>`);
     }
   },
-  informacion: () => {
+  informacion () {
     if (agregar >= extraer) {
       document.write(`<p>Estado de la cuenta: $${agregar - extraer}</p>`);
     } else {
