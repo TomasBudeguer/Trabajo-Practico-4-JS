@@ -20,7 +20,8 @@ let producto3 = new Producto(987123, "Papas Fritas Lays", 230);
 let productos = [producto1, producto2, producto3];
 console.log(productos);
 
-productos[producto1.imprimirDatos()];
-productos[producto2.imprimirDatos()];
-productos[producto3.imprimirDatos()];
+productos[0].imprimirDatos();
+productos[1].imprimirDatos();
+productos[2].imprimirDatos();
+
 
