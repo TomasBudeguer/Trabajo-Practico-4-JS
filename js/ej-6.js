@@ -7,7 +7,7 @@ class Libro {
   }
   mostrarLibro() {
     document.write(
-      `<p>El libro "${this.titulo}" con ISBN ${this.ISBN} creado por el autor ${this.autor} tiene ${this.numPaginas} paginas</p>`
+      `<p>El libro "${this.mostrarTitulo}" con ISBN ${this.mostrarISBN} creado por el autor ${this.mostrarAutor} tiene ${this.mostrarNumPaginas} paginas</p>`
     );
   }
   get mostrarISBN() {

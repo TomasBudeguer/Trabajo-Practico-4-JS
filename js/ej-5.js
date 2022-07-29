@@ -51,6 +51,49 @@ class Persona {
     );
     document.write(`<p>Dni Aleatorio: ${this.dnialeatorio}</p>`);
   }
+  get mostrarNombre (){
+    return this.nombre
+  }
+  get mostrarEdad (){
+    return this.edad
+  }
+  get mostrarDNI (){
+    return this.dni
+  }
+  get mostrarSexo (){
+    return this.sexo
+  }
+  get mostrarPeso (){
+    return this.peso
+  }
+  get mostrarAltura (){
+    return this.altura
+  }
+  get mostrarAñoNacimiento (){
+    return this.añoNacimiento
+  }
+  set modificarNombre(nuevoNombre) {
+    this.nombre = nuevoNombre;
+  }
+  set modificarEdad(nuevaEdad) {
+    this.edad = nuevaEdad;
+  }
+  set modificarDNI(nuevoDNI) {
+    this.dni = nuevoDNI;
+  }
+  set modificarSexo(nuevoSexo) {
+    this.sexo = nuevoSexo;
+  }
+  set modificarPeso(nuevoPeso) {
+    this.peso = nuevoPeso;
+  }
+  set modificarAltura(nuevaAltura) {
+    this.altura = nuevaAltura;
+  }
+  set modificarAñoNacimiento(nuevoAñoNacimiento) {
+    this.añoNacimiento = nuevoAñoNacimiento;
+  }
+
 }
 
 let persona1 = new Persona("Tomas", 15, 98765432, "H", 67, 1.81, 2007);
