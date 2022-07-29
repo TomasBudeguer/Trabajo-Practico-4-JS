@@ -11,6 +11,24 @@ class Producto {
         <li>Precio: $${this.precio}</li>
         </ul>`);
   }
+  get mostrarCodigo(){
+    return this.codigo
+  }
+  get mostrarNombre(){
+    return this.nombre
+  }
+  get mostrarPrecio(){
+    return this.precio
+  }
+  set modificarCodigo(nuevoCodigo){
+    this.codigo = nuevoCodigo
+  }
+  set modificarNombre(nuevoNombre){
+    this.nombre = nuevoNombre
+  }
+  set modificarPrecio(nuevoPrecio){
+    this.precio = nuevoPrecio
+  }
 }
 
 let producto1 = new Producto(194428, "Coca-Cola", 230);
