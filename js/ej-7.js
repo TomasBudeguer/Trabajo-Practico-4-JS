@@ -54,8 +54,22 @@ class Agenda {
       return itemContacto.nombre != nombre;
     });
     this.contactos = contactosFiltrados;
-    console.log("elemento eliminado"+ nombre);
+    console.log("elemento eliminado " + nombre);
     console.log(this.contactos);
+  }
+  listarAgenda() {
+    for (let i = 0; i < this.contactos.length; i++) {
+      console.log(this.contactos[i]);
+    }
+  }
+  huecosLibres() {
+    console.log(
+      `La agenda tiene ${this.tamanio - this.contactos.length} huecos libres`
+    );
+  }
+  set modificarTamanio(nuevoTamanio) {
+    this.tamanio = nuevoTamanio;
+    console.log(agendaTelefonica);
   }
 }
 
@@ -73,7 +87,7 @@ do {
       4- Buscar un contacto,
       5- Eliminar un contacto,
       6- Consultar si la agenda esta llena,
-      7- Consultar si la agenda tiene huecos libres,
+      7- Consultar cuantos huecos libres tiene la agenda,
       8- Cambiar el tamaño de la agenda
       `)
   );
@@ -96,9 +110,12 @@ do {
       break;
     case 3:
       // 3- Listar los contactos,
+      agendaTelefonica.listarAgenda();
       break;
     case 4:
       // 4- Buscar un contacto,
+      let nombreAEncontrar = prompt("Ingrese un nombre").toLocaleLowerCase();
+      agendaTelefonica.existeContacto(nombreAEncontrar);
       break;
     case 5:
       // 5- Eliminar un contacto,
@@ -107,12 +124,16 @@ do {
       break;
     case 6:
       // 6- Consultar si la agenda esta llena,
+      agendaTelefonica.agendaLlena();
       break;
     case 7:
       // 7- Consultar si la agenda tiene huecos libres,
+      agendaTelefonica.huecosLibres();
       break;
     case 8:
       // 8- Cambiar el tamaño de la agenda
+      let cambiarTamanio = parseInt(prompt("Elija el tamaño de la agenda"));
+      agendaTelefonica.modificarTamanio = cambiarTamanio;
       break;
     default:
       alert(`Ingreso una opcion incorrecta`);
