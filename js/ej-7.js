@@ -20,11 +20,28 @@ class Agenda {
       if (this.agendaLlena() === false) {
         // if(!this.agendaLlena()){
         this.contactos.push(contactoNuevo);
+      }else{
+        document.write('No se agrego el contacto, la agenda esta llena')
       }
     }
     console.log(this.contactos);
   }
 
+  existeContacto(nombre) {
+    // es porque el contacto existe
+    const contactoExistente = this.contactos.find((itemContacto) => {
+      return nombre === itemContacto.nombre;
+    });
+    console.log(contactoExistente);
+    if (contactoExistente) {
+      console.log("el contacto existe");
+      return true;
+    } else {
+      console.log("el contacto NO existe");
+      return false;
+    }
+  }
+  
   existeContacto(nombre) {
     // es porque el contacto existe
     const contactoExistente = this.contactos.find((itemContacto) => {
@@ -54,7 +71,8 @@ class Agenda {
       return itemContacto.nombre != nombre;
     });
     this.contactos = contactosFiltrados;
-    console.log("elemento eliminado " + nombre);
+    console.log("Contacto eliminado: " + nombre);
+    document.write("Contacto eliminado: " + nombre);
     console.log(this.contactos);
   }
   listarAgenda() {
