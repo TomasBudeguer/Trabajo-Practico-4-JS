@@ -10,6 +10,13 @@ class Libro {
       `<p>El libro "${this.mostrarTitulo}" con ISBN ${this.mostrarISBN} creado por el autor ${this.mostrarAutor} tiene ${this.mostrarNumPaginas} paginas</p>`
     );
   }
+  compararLibros(){
+    if (libro1.numPaginas > libro2.numPaginas) {
+      document.write(`<p>El libro ${libro1.titulo} tiene mas paginas</p>`);
+    } else {
+      document.write(`<p>El libro ${libro2.titulo} tiene mas paginas</p>`);
+    }
+  }
   get mostrarISBN() {
     return this.ISBN;
   }
@@ -51,8 +58,6 @@ let libro2 = new Libro(
 
 libro1.mostrarLibro();
 libro2.mostrarLibro();
-if (libro1.mostrarNumPaginas > libro2.mostrarNumPaginas) {
-  document.write(`<p>El libro ${libro1.mostrarTitulo} tiene mas paginas</p>`);
-} else {
-  document.write(`<p>El libro ${libro2.mostrarTitulo} tiene mas paginas</p>`);
-}
+libro1.compararLibros()
+
+

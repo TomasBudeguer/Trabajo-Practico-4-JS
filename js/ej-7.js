@@ -42,21 +42,6 @@ class Agenda {
     }
   }
   
-  existeContacto(nombre) {
-    // es porque el contacto existe
-    const contactoExistente = this.contactos.find((itemContacto) => {
-      return nombre === itemContacto.nombre;
-    });
-    console.log(contactoExistente);
-    if (contactoExistente) {
-      console.log("el contacto existe");
-      return true;
-    } else {
-      console.log("el contacto NO existe");
-      return false;
-    }
-  }
-
   agendaLlena() {
     if (this.contactos.length === this.tamanio) {
       console.log("la agenda esta llena");
